@@ -1,22 +1,25 @@
-""" This is a python exercise created by Grok 3 for me to solve - Finished and updated with assistance from AI """
+""" This is a python exercise created by Grok 3 for me to solve - 
+Finished and updated with assistance from AI """
 
 
 def temperature_data():
-    temperatures = []  # empty list to store the temperatures
+    """ This function takes daily temp input from the user"""
+    daily_temperatures = []  # empty list to store the temperatures
     for i in range(7):  # 7 days in a week
         while True:
             try:        # try to convert the input to a float
                 temp = float(
                     input(f"Enter the temperature for day {i + 1} in Celsius: "))
                 # add the temperature to the end of the list
-                temperatures.append(temp)
+                daily_temperatures.append(temp)
                 break
             except ValueError:  # if the user enters a non-numeric value
                 print("Please enter a valid temperature!")
-    return temperatures  # return the list of temperatures
+    return daily_temperatures  # return the list of temperatures
 
 
-# Store the temperatures in a variable so that we can use it later without calling the function again
+# Store the temperatures in a variable so that we can use it later without calling
+# the function again
 temperatures = temperature_data()
 
 # calculate the average temperature for the week
